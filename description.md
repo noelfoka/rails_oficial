@@ -29,3 +29,12 @@ rails g controller articles index --skip-routes
 ```ruby
 root "articles#index"
 ```
+## MVC
+
+### Generating a model
+
+```ruby
+rails g model Article title:string body:text
+```
+### Database migration
+
