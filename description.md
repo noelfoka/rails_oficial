@@ -38,3 +38,5 @@ rails g model Article title:string body:text
 ```
 ### Database migration
 
+### Using model to interact with the database
+
