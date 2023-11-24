@@ -24,3 +24,8 @@ To make it, let generate this code:
 ```bash
 rails g controller articles index --skip-routes
 ```
+### Default route
+
+```ruby
+root "articles#index"
+```
