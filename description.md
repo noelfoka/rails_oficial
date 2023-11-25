@@ -44,8 +44,26 @@ rails db:create
 rails db:migrate
 ```
 
-### Using model to interact with the database
-
 ```bash
 rails generate model Article title:string body:text
+```
+
+### Using model to interact with the database
+
+Type this command: `rails console`
+
+Inside the console, We can:
+
+- Add a new article: 
+```bash
+article = Article.new(title: "Hello rails", body: "I am on rails rails")
+```
+- Save the new article:
+```bash
+article.save
+```
+- See this article: `article`
+- Find the article by `id`:
+```ruby
+Article.find(1)
 ```
