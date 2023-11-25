@@ -67,3 +67,21 @@ article.save
 ```ruby
 Article.find(1)
 ```
+
+### Showing a list of A rticle
+
+- Inside our controller, add this command:
+```ruby
+@article = Article.all
+```
+- Inside your `views/articles/index.html.erb` add this code:
+
+```ruby
+<ul>
+    <% @article.each do |article| %>
+        <li>
+            <%= article.tile%>
+        </li>
+    <% end %>
+</ul>
+```
