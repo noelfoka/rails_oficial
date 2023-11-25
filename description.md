@@ -105,3 +105,13 @@ end
 - **Views**
 In `views/article`, create `show.html.erb` file and add the the single article by adding title and body
 
+### Create New Article
+
+- **Controller**
+
+In `controller/articles_controller.rb` create new action method called `new`:
+```ruby
+def new
+    @article = Article.new
+end
+``` 
