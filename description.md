@@ -38,5 +38,14 @@ rails g model Article title:string body:text
 ```
 ### Database migration
 
+```bash
+rails db:create
+
+rails db:migrate
+```
+
 ### Using model to interact with the database
 
+```bash
+rails generate model Article title:string body:text
+```
