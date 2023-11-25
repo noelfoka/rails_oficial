@@ -115,3 +115,38 @@ def new
     @article = Article.new
 end
 ``` 
+- **Views**
+
+In `views` directory, create a new file `show.html.erb` and write this code:
+```ruby
+<h1>New Article</h1>
+
+<%= form_with model: @article do |form| %>
+    <div>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+        <% @article.errors.full_messages_for(:title).each do |message| %>
+            <div>
+                <%= message %>
+            </div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :body %><br>
+        <%= form.text_area :body %>
+        <% @article.errors.full_messages_for(:body).each do |message| %>
+            <div>
+                <%= message %>
+            </div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
+```
+
+### Edit and Update
+
