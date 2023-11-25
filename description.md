@@ -102,3 +102,6 @@ def show
     @article = Article.find(params[:id])
 end
 ```
+- **Views**
+In `views/article`, create `show.html.erb` file and add the the single article by adding title and body
+
