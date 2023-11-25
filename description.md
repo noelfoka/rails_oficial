@@ -85,3 +85,20 @@ Article.find(1)
     <% end %>
 </ul>
 ```
+
+## CRUD
+
+### showing a single article
+
+- **Routes**
+Add this route
+```ruby
+get "/articles/:id", to: "articles#show"
+```
+- **New action in articles_controller**
+
+```ruby
+def show
+    @article = Article.find(params[:id])
+end
+```
